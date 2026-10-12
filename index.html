@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DK Services</title><link rel="icon" href="https://dkservice.vercel.app/logo.png">
+<style>
+:root{--n1:#040b26;--n2:#0a1a55;--b:#1b3fa8;--b2:#4f8ff7;--sk:#14b8d8;--bl:#f1f6ff;--bm:#dbe8ff;--t:#0f1b3d;--m:#6577a0;--l:#e5ebf6;--r:#e5484d;--g:#12a678;--am:#f59e0b;box-sizing:border-box;color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:Inter,"Segoe UI",system-ui,sans-serif;background:#f4f7fd;color:var(--t);font-size:14px;-webkit-font-smoothing:antialiased}
+button,input,select{font:inherit;color:inherit}svg{flex:none}
+aside{position:fixed;inset:0 auto 0 0;width:252px;background:linear-gradient(170deg,#050c2a 0%,#0a1a55 62%,#0c2f7c 100%);color:#cfdcff;display:flex;flex-direction:column;padding:22px 16px;z-index:5}
+.brand{display:flex;align-items:center;gap:12px;padding:4px 10px 22px;border-bottom:1px solid #ffffff1f;margin-bottom:14px}
+.brand i{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--sk),var(--b));display:grid;place-items:center;color:#fff;box-shadow:0 6px 16px #0a2a6b88}
+.brand b{color:#fff;font-size:17px;letter-spacing:.3px;display:block}.brand small{font-size:11px;color:#9db6ee;letter-spacing:1.5px}
+.sec{font-size:10.5px;letter-spacing:1.6px;color:#8fa9e6;padding:14px 12px 6px;font-weight:700}
+.nv{position:relative;display:flex;align-items:center;gap:13px;width:100%;padding:11px 12px;border-radius:11px;border:0;background:0;color:#cfdcff;cursor:pointer;font-weight:600;text-align:left;transition:.15s}
+.nv:hover{background:#ffffff14;color:#fff}.nv.on{background:#ffffff22;color:#fff}.nv.on:before{content:"";position:absolute;left:-16px;top:8px;bottom:8px;width:4px;border-radius:0 4px 4px 0;background:var(--sk)}
+.nv .ct{margin-left:auto;background:var(--sk);color:var(--n1);font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px}
+.me{margin-top:auto;display:flex;gap:11px;align-items:center;padding:12px;background:#ffffff14;border-radius:14px}
+.av{width:36px;height:36px;border-radius:50%;background:var(--bm);color:var(--n2);display:grid;place-items:center;font-weight:800;font-size:13px;flex:none}
+.me b{color:#fff;display:block;font-size:13px}.me small{color:#9db6ee}
+main{margin-left:252px;min-width:0}
+.top{position:sticky;top:0;z-index:4;height:84px;background:#ffffffee;backdrop-filter:blur(8px);border-bottom:1px solid var(--l);display:flex;align-items:center;padding:0 32px;gap:14px}
+.top h1{margin:0;font-size:22px;letter-spacing:-.3px}.top small{color:var(--m)}
+.sp{flex:1}.sync{display:flex;align-items:center;gap:8px;color:var(--m);font-size:13px;margin-right:6px}.sync i{width:8px;height:8px;border-radius:50%;background:var(--g);box-shadow:0 0 0 4px #12a67822}
+.ib{width:42px;height:42px;border-radius:50%;border:1px solid var(--l);background:#fff;display:grid;place-items:center;cursor:pointer;color:var(--n2)}.ib:hover{background:var(--bl)}
+.pg{padding:28px 32px 48px;max-width:1600px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,var(--b),#102f7c);color:#fff;border:0;padding:10px 18px;border-radius:11px;cursor:pointer;font-weight:700;box-shadow:0 4px 12px #1b3fa833}
+.btn:hover{filter:brightness(1.08)}.btn.s{background:#fff;color:var(--n2);border:1px solid var(--l);box-shadow:none}.btn.s:hover{background:var(--bl)}
+.xb{width:32px;height:32px;border-radius:9px;border:1px solid var(--l);background:#fff;display:inline-grid;place-items:center;cursor:pointer;color:var(--m);margin-left:4px}.xb:hover{background:var(--bl);color:var(--b)}.xb.d:hover{background:#fdecec;color:var(--r);border-color:#f6c9cb}
+input,select{width:100%;padding:10px 13px;border:1px solid var(--l);border-radius:11px;background:#fff;outline:none}
+input:focus,select:focus{border-color:var(--b2);box-shadow:0 0 0 4px #4f8ff725}
+label{display:block;font-size:12px;color:var(--m);margin:12px 0 5px;font-weight:700}
+.tabs{display:flex;gap:26px;border-bottom:1px solid var(--l);margin-bottom:22px;align-items:center}
+.tab{padding:12px 2px;border:0;background:0;font-weight:700;color:var(--m);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-1px}.tab.on{color:var(--b);border-color:var(--b)}
+.grid{display:grid;gap:20px}.k4{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}.c2{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr))}.c3{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+.card{background:var(--card);border:1px solid var(--l);border-radius:18px;padding:22px;box-shadow:0 2px 10px #1f3d9910}
+.kpi{position:relative;display:flex;gap:14px;align-items:center;border-left:5px solid var(--b)}
+.kpi .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center}
+.kpi .k{font-size:11.5px;letter-spacing:1px;color:var(--m);font-weight:800}.kpi .v{font-size:22px;font-weight:800;letter-spacing:-.5px;margin:2px 0}
+.dl{font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:99px}.dl.u{background:#dcf6ec;color:#0d8a62}.dl.d{background:#fde8e9;color:#c93a3f}
+.ch{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-weight:800;font-size:13px;letter-spacing:.8px;color:var(--n2);text-transform:uppercase}.ch svg{color:var(--b)}
+.lg{display:flex;gap:16px;font-size:12px;color:var(--m);margin-left:auto;text-transform:none;letter-spacing:0;font-weight:600}.lg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.cb{margin:13px 0}.cb div:first-child{display:flex;justify-content:space-between;margin-bottom:6px;font-weight:600}.cb .tr{height:8px;background:var(--bl);border-radius:9px;overflow:hidden}.cb .tr i{display:block;height:100%;border-radius:9px}
+.tcard{padding:0;overflow:hidden}
+.tb{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--l)}
+.sr{position:relative;width:320px}.sr svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--m)}.sr input{padding-left:40px;background:var(--bl);border-color:transparent}
+.tw{max-height:calc(100vh - 290px);overflow:auto}
+table{width:100%;border-collapse:separate;border-spacing:0}
+th{position:sticky;top:0;background:#f7faff;text-align:left;font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;color:var(--m);font-weight:800;padding:13px 20px;border-bottom:1px solid var(--l);z-index:1}
+td{padding:14px 20px;border-bottom:1px solid var(--l2);vertical-align:middle}
+tbody tr:nth-child(even){background:#fafcff}tbody tr:hover{background:var(--bl)}
+.r{text-align:right}.c{text-align:center}.sub{display:block;font-size:12px;color:var(--m);margin-top:2px}
+.cell{display:flex;align-items:center;gap:12px}.tag{display:inline-block;background:var(--bl);color:var(--n2);padding:4px 11px;border-radius:8px;font-size:12px;font-weight:700}
+.bd{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:99px;font-size:12px;font-weight:700}.bd:before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.ok{background:#dcf6ec;color:#0d8a62}.lw{background:#fff1d6;color:#b26a00}.no{background:#fde8e9;color:#c93a3f}
+.ft{padding:12px 20px;color:var(--m);font-size:12.5px;border-top:1px solid var(--l);background:#f7faff}
+.pgb{height:6px;width:110px;background:var(--bm);border-radius:9px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:10px}.pgb i{display:block;height:100%;background:var(--b)}
+.hd{display:flex;align-items:center;margin-bottom:18px;gap:12px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.cal .h{text-align:center;font-size:11px;color:var(--m);font-weight:800;letter-spacing:1px;padding:6px}
+.dy{min-height:92px;border:1px solid var(--l);border-radius:12px;padding:7px;cursor:pointer;background:#fff;font-size:12px;overflow:hidden;transition:.12s}.dy:hover{background:var(--bl);border-color:var(--b2)}.dy.td{border:2px solid var(--b);background:var(--bl)}.dy.o{opacity:.35}
+.ev{background:linear-gradient(90deg,var(--b),var(--b2));color:#fff;border-radius:6px;padding:2px 6px;margin-top:3px;font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mk{position:fixed;inset:0;background:#0a1b4a99;backdrop-filter:blur(3px);display:grid;place-items:center;z-index:20;padding:20px;overflow:auto}
+.md{background:#fff;border-radius:20px;padding:28px;width:100%;max-width:480px;box-shadow:0 30px 80px #0a1b4a66}.md.w{max-width:800px}
+.row{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+#toasts{position:fixed;right:24px;top:24px;z-index:30;display:grid;gap:10px}.ts{background:#fff;border-left:5px solid var(--b);padding:14px 18px;border-radius:12px;box-shadow:0 12px 30px #0a1b4a40;width:320px}
+#doc{background:#fff;color:#000;padding:8px}
+@media print{body *{visibility:hidden}#doc,#doc *{visibility:visible}#doc{position:absolute;left:0;top:0;width:100%}}
+.kpi{padding:18px 20px;gap:12px}.kpi .ic{width:44px;height:44px}.kpi>div:last-child{min-width:0}.bl{background:#e3edff;color:#1b3fa8}.card{min-width:0}.tw{overflow:auto}
+.btn.mini{padding:6px 12px;font-size:12px}
+.md.doc{max-width:880px;padding:0;overflow:hidden}
+.dk{background:#fff;color:#0f1b3d;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:34px 44px 52px;background:linear-gradient(120deg,#040b26,#1b3fa8);color:#fff}
+.dh .l2{display:flex;gap:14px;align-items:center}.dh .l2 i{width:48px;height:48px;border-radius:14px;background:#ffffff26;display:grid;place-items:center}
+.dh b{font-size:22px;display:block}.dh small{opacity:.8;letter-spacing:1.6px;font-size:10.5px}.dn{text-align:right}.dn b{font-size:28px}
+.dm{display:grid;grid-template-columns:repeat(3,1fr);margin:-28px 44px 0;background:#fff;border-radius:14px;box-shadow:0 10px 30px #0a1b4a26;border:1px solid #e5ebf6;position:relative}
+.dm div{padding:16px 20px}.dm div+div{border-left:1px solid #e5ebf6}.dm small,.db small{display:block;font-size:10.5px;letter-spacing:1.3px;color:#6577a0;font-weight:800;margin-bottom:5px}
+.db{padding:26px 44px 14px}.db h3{margin:0 0 3px;font-size:20px}.db p{margin:0;color:#6577a0}
+.dk table{margin-top:22px}.dk th{position:static;background:none;padding:10px 0;border-bottom:2px solid #0a1a55;color:#0a1a55}.dk td{padding:14px 0;border-bottom:1px solid #e5ebf6}.dk tbody tr:nth-child(even),.dk tbody tr:hover{background:none}
+.tt{margin:22px 0 0 auto;width:310px;font-size:14px}.tt div{display:flex;justify-content:space-between;padding:6px 0;color:#6577a0}.tt .g{margin-top:8px;padding:16px 18px;border-radius:14px;background:linear-gradient(120deg,#040b26,#1b3fa8);color:#fff;font-size:18px;font-weight:800}
+.cn{margin:26px 44px 0;padding:18px 22px;background:#f4f7fd;border-radius:14px;font-size:12.5px;line-height:1.7;color:#42527a}.cn b{color:#0a1a55;font-size:11px;letter-spacing:1.3px;display:block;margin-bottom:4px}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin:44px 44px 0;text-align:center;font-size:12px;color:#6577a0}.sg div{border-top:1px solid #9aa8c9;padding-top:8px}
+.fo{margin-top:30px;padding:16px 44px;background:#040b26;color:#b9c9f2;font-size:11.5px;text-align:center;letter-spacing:.4px}
+@page{size:A4;margin:0}
+.logo{flex:1;height:60px;display:flex;align-items:center;justify-content:flex-start}.logo img{max-width:100%;max-height:100%;object-fit:contain}.logo .fb{display:none;align-items:center;gap:12px;text-align:left}.logo .fb i{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#14b8d8,#1b3fa8);display:grid;place-items:center;color:#fff;flex:none}.logo.nologo{background:none;box-shadow:none;padding:0;justify-content:flex-start}.logo.nologo img{display:none}.logo.nologo .fb{display:flex}.logo.nologo .fb b{color:#fff}.logo.nologo .fb small{color:#9db6ee;opacity:1}.dh .logo{flex:none;width:230px;height:66px}
+
+:root{--l2:#eef2fa;--card:#fff}
+.xb.wa{color:#16a34a;border-color:#bfe9cf;background:#effaf3}.xb.wa:hover{background:#16a34a;color:#fff;border-color:#16a34a}
+[data-theme=dark]{--t:#e9ebf1;--m:#8d95aa;--l:#26272d;--l2:#1e1f24;--bl:#1a1b21;--bm:#272932;--n2:#9dbcff;--card:#141417;color-scheme:dark}
+[data-theme=dark] body{background:#0b0b0d}
+[data-theme=dark] aside{background:linear-gradient(170deg,#030304 0%,#0c0c0f 55%,#18181d 100%);border-right:1px solid #1c1c21}
+[data-theme=dark] .top{background:#0e0e11ee}
+[data-theme=dark] .md,[data-theme=dark] .dy,[data-theme=dark] .ib,[data-theme=dark] .btn.s,[data-theme=dark] .xb,[data-theme=dark] input,[data-theme=dark] select,[data-theme=dark] .ts{background:var(--card)}
+[data-theme=dark] th,[data-theme=dark] .ft{background:#18181c}
+[data-theme=dark] tbody tr:nth-child(even){background:#111114}
+[data-theme=dark] tbody tr:hover{background:#1c1d23}
+[data-theme=dark] .sr input{background:var(--bl)}
+[data-theme=dark] .dy.td{background:#16213f}
+[data-theme=dark] .dy:hover,[data-theme=dark] .btn.s:hover,[data-theme=dark] .ib:hover,[data-theme=dark] .xb:hover{background:#1f2027}
+[data-theme=dark] .xb.wa{background:#10261a;border-color:#1c4d33}
+[data-theme=dark] .xb.wa:hover{background:#16a34a}
+[data-theme=dark] .dk{--t:#0f1b3d;--m:#6577a0;--l:#e5ebf6;--l2:#eef2fa;--bl:#f1f6ff;--n2:#0a1a55}
+[data-theme=dark] .dk th{background:none}
+[data-theme=dark] .dk tbody tr:nth-child(even),[data-theme=dark] .dk tbody tr:hover{background:none}
+
+/* refinamento do tema escuro: texto suave, pesos mais leves, cores com contraste confortável */
+[data-theme=dark]{--t:#c3cade;--m:#7f879c}
+[data-theme=dark] body{font-weight:400}
+[data-theme=dark] .top h1{color:#d9dfee;font-weight:650}
+[data-theme=dark] .kpi .v{color:#d3d9ec;font-weight:650;letter-spacing:-.3px}
+[data-theme=dark] .kpi .k,[data-theme=dark] th{font-weight:650;color:#7f879c}
+[data-theme=dark] td b,[data-theme=dark] .cell b,[data-theme=dark] .cb b,[data-theme=dark] .db b{font-weight:600;color:#cfd6e8}
+[data-theme=dark] .ch{color:#8fb0f5;font-weight:650}
+[data-theme=dark] .nv{font-weight:550}
+[data-theme=dark] .tab{font-weight:600}.tab.on{}
+[data-theme=dark] .tab.on{color:#86a9ff;border-color:#4f7df0}
+[data-theme=dark] .kpi .ic{background:#ffffff0e!important;filter:brightness(1.75) saturate(1.1)}
+[data-theme=dark] .kpi[style*="#1b3fa8"]{border-left-color:#4f7df0!important}
+[data-theme=dark] .dl{font-weight:650}
+[data-theme=dark] .dl.u{background:#0f2b24;color:#52d6a6}
+[data-theme=dark] .dl.d{background:#2f1619;color:#ff9a9f}
+[data-theme=dark] .bd.ok{background:#0f2b24;color:#52d6a6}
+[data-theme=dark] .bd.lw{background:#2e2410;color:#f5bf5a}
+[data-theme=dark] .bd.no{background:#2f1619;color:#ff9a9f}
+[data-theme=dark] .tag{background:#1c2236;color:#9dbcff}
+[data-theme=dark] .btn.s{color:#9dbcff}
+[data-theme=dark] svg [fill="#1b3fa8"]{fill:#4f7df0}
+[data-theme=dark] svg [stroke="#1b3fa8"]{stroke:#4f7df0}
+[data-theme=dark] svg stop[stop-color="#1b3fa8"]{stop-color:#4f7df0}
+[data-theme=dark] svg [fill="#9ec5ff"]{fill:#5f84cf}
+[data-theme=dark] .lg i[style*="#1b3fa8"],[data-theme=dark] .tr i[style*="#1b3fa8"]{background:#4f7df0!important}
+[data-theme=dark] .lg i[style*="#9ec5ff"]{background:#5f84cf!important}
+[data-theme=dark] .tr i[style*="#e5484d"]{background:#d9575c!important}
+/* documento (orçamento/relatório) continua claro */
+[data-theme=dark] .dk td b,[data-theme=dark] .dk .cb b,[data-theme=dark] .dk .db b,[data-theme=dark] .dk .cell b{font-weight:700;color:inherit}
+[data-theme=dark] .dk svg [fill="#1b3fa8"]{fill:#1b3fa8}
+[data-theme=dark] .dk svg [fill="#9ec5ff"]{fill:#9ec5ff}
+[data-theme=dark] .dk .tr i[style*="#1b3fa8"]{background:#1b3fa8!important}
+[data-theme=dark] .dk .tr i[style*="#e5484d"]{background:#e5484d!important}
+[data-theme=dark] .dk th{font-weight:800;color:#0a1a55}
+th{white-space:nowrap}td.r,td.c{white-space:nowrap}.xb{vertical-align:middle}
+.dk th{white-space:normal}
+</style></head><body>
+<aside id="side"></aside><main><div class="top" id="top"></div><div class="pg" id="pg"></div></main><div id="toasts"></div>
+<script>
+const IC={wa:'<path d="M3.5 20.5l1.4-4.6A8.5 8.5 0 1112 20.5a8.5 8.5 0 01-4.1-1.1z"/><path d="M9 8.8c.2 2.4 2.7 4.9 5.2 5.2l1.2-1.3-2-1.1-.9.7c-.9-.4-1.7-1.2-2.1-2.1l.7-.9-1.1-2z"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"/>',moon:'<path d="M20 14.5A8.5 8.5 0 019.5 4a8.5 8.5 0 1010.5 10.5z"/>',os:'<path d="M14.7 6.3a4 4 0 00-5.4 5.1L3.5 17.2a1.8 1.8 0 002.6 2.6l5.8-5.8a4 4 0 005.1-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/>',snow:'<path d="M12 2.5v19M4 7l16 10M20 7L4 17M9.5 4L12 6.5 14.5 4M9.5 20L12 17.5 14.5 20"/>',dash:'<rect x="3" y="3" width="7.5" height="9" rx="2"/><rect x="13.5" y="3" width="7.5" height="5" rx="2"/><rect x="13.5" y="11" width="7.5" height="10" rx="2"/><rect x="3" y="15" width="7.5" height="6" rx="2"/>',fin:'<path d="M3 17l5.5-5.5 4 4L21 6.5"/><path d="M15 6.5h6v6"/>',agenda:'<rect x="3" y="4.5" width="18" height="16.5" rx="3.5"/><path d="M8 2.5v4M16 2.5v4M3 10h18M8 14.5h2M13 14.5h3"/>',est:'<path d="M21 7.5L12 3 3 7.5l9 4.5 9-4.5z"/><path d="M3 7.5v9L12 21l9-4.5v-9M12 12v9"/>',cli:'<circle cx="9" cy="8" r="3.6"/><path d="M2.5 20c.6-3.7 3.3-5.7 6.5-5.7s5.9 2 6.5 5.7"/><circle cx="17.5" cy="9.5" r="2.6"/><path d="M17.5 14.6c2.3.3 3.7 1.9 4 4.4"/>',orc:'<path d="M6 3h8.5L19 7.5V21H6z"/><path d="M14 3v5h5M9.5 13h6M9.5 17h4"/>',plus:'<path d="M12 5v14M5 12h14"/>',search:'<circle cx="11" cy="11" r="7"/><path d="M20.5 20.5L16 16"/>',trash:'<path d="M4 7h16M9.5 11v6M14.5 11v6M6 7l.9 12.2a1.5 1.5 0 001.5 1.3h7.2a1.5 1.5 0 001.5-1.3L18 7M9 7V4h6v3"/>',up:'<path d="M7 17L17 7M8.5 7H17v8.5"/>',down:'<path d="M7 7l10 10M17 8.5V17H8.5"/>',inb:'<path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M5 20h14"/>',outb:'<path d="M12 16V5M7.5 9.5L12 5l4.5 4.5M5 20h14"/>',pdf:'<path d="M12 3v12M7.5 10.5L12 15l4.5-4.5M4 20h16"/>',bell:'<path d="M6 16.5V11a6 6 0 0112 0v5.5l1.8 2H4.2zM10 21.5h4"/>',cog:'<circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M18.7 5.3l-2.1 2.1M7.4 16.6l-2.1 2.1"/>',full:'<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',wal:'<path d="M3.5 7.5A2.5 2.5 0 016 5h11v3"/><rect x="3.5" y="8" width="17" height="12" rx="3"/><circle cx="16.5" cy="14" r="1.2"/>',pie:'<path d="M12 3a9 9 0 109 9h-9z"/><path d="M15 3.5A9 9 0 0120.5 9H15z"/>',alert:'<path d="M12 3.5l9.5 16.5h-19z"/><path d="M12 10v4.5M12 17.5v.1"/>',tgt:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/>'};
+const ico=(n,s=18)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${IC[n]}</svg>`;
+const $=s=>document.querySelector(s),R=n=>(+n).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'),fd=s=>s.split('-').reverse().join('/');
+const ini=n=>n.split(' ').slice(0,2).map(x=>x[0]).join('').toUpperCase(),sum=(a,t)=>a.filter(x=>x.t==t).reduce((s,x)=>s+x.v,0);
+let D,view='dash',tab='fin',cm=new Date(),CF,mem={};
+const st={get:k=>{try{return localStorage.getItem(k)}catch(e){return mem[k]}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){mem[k]=v}}};
+function save(){st.set('dk3',JSON.stringify(D))}
+function seed(){let x=11;const r=()=>(x=(x*9301+49297)%233280)/233280,now=new Date(),tx=[],rc=['Manutenção','Instalação','Contratos PMOC'],dc=['Peças e materiais','Salários técnicos','Combustível','Ferramentas','Impostos'];
+for(let m=5;m>=0;m--){const b=new Date(now.getFullYear(),now.getMonth()-m,1);
+for(let i=0;i<4;i++)tx.push({d:iso(new Date(b.getFullYear(),b.getMonth(),3+i*6)),t:'r',c:rc[i%3],ds:['Manutenção preventiva','Instalação de split','Contrato PMOC mensal','Limpeza e higienização'][i],v:Math.round(5000+r()*7000)});
+for(let i=0;i<5;i++)tx.push({d:iso(new Date(b.getFullYear(),b.getMonth(),2+i*5)),t:'d',c:dc[i],ds:['Compra de peças e gás','Folha dos técnicos','Combustível da frota','Ferramentas e EPIs','Impostos do mês'][i],v:Math.round(1800+r()*3800)})}
+const nm=['Condomínio Vista Verde','Clínica Sorriso','Restaurante Sabor & Arte','Escritório Prime','Padaria Pão Dourado','Escola Pequenos Passos','Hotel Brisa','Residência Silva'],cid=['Sorocaba','Votorantim','Campinas','São Paulo'];
+const cli=nm.map((n,i)=>({n,e:'contato@'+n.split(' ').pop().toLowerCase().replace(/[^a-z]/g,'')+'.com.br',t:'(15) 9'+Math.floor(1000+r()*8999)+'-'+Math.floor(1000+r()*8999),c:cid[i%4]}));
+const svc=[['Limpeza de split 9.000–12.000 BTU',150],['Limpeza de split 18.000–24.000 BTU',220],['Manutenção preventiva (PMOC)',280],['Higienização completa',260],['Carga de gás refrigerante',320],['Reparo de placa eletrônica',480],['Instalação de split 12.000 BTU',650],['Troca de compressor',1400]].map(a=>({n:a[0],p:a[1]}));
+const pn=[['Gás R410A (kg)',95],['Gás R32 (kg)',110],['Capacitor 35µF',45],['Filtro de ar universal',28],['Tubo de cobre 1/4" (m)',32],['Suporte condensadora 400mm',65],['Controle remoto universal',55],['Mangueira de dreno (m)',9]];
+const prod=pn.map((a,i)=>({n:a[0],sku:'PC-'+(2001+i),q:i==2?0:i==5?6:Math.round(15+r()*60),min:10,p:a[1]}));
+const tec=['Rafael','Thiago','Diego'],stt=[2,2,2,1,1,0,0,0],os=stt.map((st,i)=>({n:1001+i,c:i%8,sv:i%svc.length,tec:tec[i%3],d:iso(new Date(now.getTime()+86400000*(i-3))),st,v:svc[i%svc.length].p}));
+const t=new Date(now.getTime()+10*60000),H=d=>('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2),dd=k=>iso(new Date(now.getTime()+86400000*k));
+return{tx,cli,prod,svc,os,ni:2,ev:[{t:'Visita técnica — Clínica Sorriso',d:iso(now),h:H(t),a:30},{t:'Manutenção PMOC — Condomínio',d:dd(2),h:'09:00',a:60},{t:'Instalação de split — Escritório Prime',d:dd(5),h:'14:30',a:30},{t:'Reposição de gás e filtros',d:dd(9),h:'10:00',a:1440}],orc:[{n:1,c:0,d:iso(now),val:15,desc:5,pg:'50% na aprovação + 50% na conclusão',it:[{k:'s',i:2,q:1},{k:'p',i:0,q:2}]}]}}
+const PG={dash:['Dashboard','Visão geral da DK Services'],fin:['Financeiro','Lançamentos, receitas e despesas'],agenda:['Agenda','Visitas técnicas e lembretes'],est:['Estoque','Peças, gás e materiais'],cli:['Clientes','Cadastro e relacionamento'],orc:['Orçamentos','Propostas profissionais em PDF']};
+const ST=['Agendada','Em andamento','Concluída'],SC=['bl','lw','ok'];
+function nav(v){view=v||view;const L=[['dash','Dashboard'],['fin','Financeiro'],['agenda','Agenda'],['est','Estoque'],['cli','Clientes'],['orc','Orçamentos']],low=D.prod.filter(p=>p.q<=p.min).length;
+const b=l=>`<button class="nv ${view==l[0]?'on':''}" onclick="nav('${l[0]}')">${ico(l[0],20)}${l[1]}${l[0]=='est'&&low?`<span class="ct">${low}</span>`:''}</button>`;
+$('#side').innerHTML=`<div class="brand"><div class="logo"><img src="https://dkservice.vercel.app/logorodape.png" alt="DK" onerror="this.parentNode.classList.add('nologo')"><div class="fb"><i>${ico('snow',22)}</i><div><b>DK SERVICES</b><small>MANUTENÇÃO &amp; SERVIÇOS</small></div></div></div></div><div class="sec">PRINCIPAL</div>${b(L[0])}${b(L[1])}<div class="sec">OPERAÇÃO</div>${b(L[2])}${b(L[3])}${b(L[4])}<div class="sec">COMERCIAL</div>${b(L[5])}<div class="me"><div class="av">AD</div><div><b>Administrador</b><small>Acesso total</small></div></div>`;
+$('#top').innerHTML=`<div><h1>${PG[view][0]}</h1><small>${PG[view][1]}</small></div><div class="sp"></div><div class="sync"><i></i>Dados salvos</div><button class="ib" title="Alternar tema claro/escuro" onclick="setTheme(TH=='dark'?'light':'dark')">${ico(TH=='dark'?'sun':'moon')}</button><button class="ib" title="Tela cheia" onclick="document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()">${ico('full')}</button>`;
+$('#pg').innerHTML=({dash,fin,agenda,est,cli,orc})[view]();scrollTo(0,0)}
+function months(){const o=[],n=new Date();for(let m=5;m>=0;m--){const b=new Date(n.getFullYear(),n.getMonth()-m,1),k=iso(b).slice(0,7),f=D.tx.filter(x=>x.d.startsWith(k));o.push({l:b.toLocaleDateString('pt-BR',{month:'short'}).replace('.',''),r:sum(f,'r'),d:sum(f,'d')})}return o}
+const k=v=>v>=1000?(v/1000).toFixed(v%1000?1:0).replace('.',',')+'k':v;
+function line(M){const W=640,H=250,P=40,mx=Math.ceil(Math.max(...M.flatMap(m=>[m.r,m.d]))*1.1/2000)*2000,X=i=>P+i*(W-P-14)/5,Y=v=>H-v/mx*H+10;
+const path=key=>M.map((m,i)=>{const x=X(i),y=Y(m[key]);if(!i)return`M${x},${y}`;const px=X(i-1),py=Y(M[i-1][key]),cx=(px+x)/2;return`C${cx},${py} ${cx},${y} ${x},${y}`}).join(' ');
+return`<svg viewBox="0 0 ${W} ${H+34}" style="width:100%"><defs><linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b3fa8" stop-opacity=".28"/><stop offset="1" stop-color="#1b3fa8" stop-opacity="0"/></linearGradient></defs>${[0,1,2,3,4].map(i=>`<line x1="${P}" x2="${W}" y1="${Y(mx/4*i)}" y2="${Y(mx/4*i)}" style="stroke:var(--l)"/><text x="${P-8}" y="${Y(mx/4*i)+4}" text-anchor="end" font-size="11" fill="#6577a0">${k(mx/4*i)}</text>`).join('')}
+<path d="${path('r')} L${X(5)},${Y(0)} L${X(0)},${Y(0)}Z" fill="url(#gA)"/><path d="${path('r')}" fill="none" stroke="#1b3fa8" stroke-width="3"/><path d="${path('d')}" fill="none" stroke="#14b8d8" stroke-width="3" stroke-dasharray="6 5"/>
+${M.map((m,i)=>`<circle cx="${X(i)}" cy="${Y(m.r)}" r="5" fill="#fff" stroke="#1b3fa8" stroke-width="3"><title>${m.l}: Receitas ${R(m.r)}</title></circle><circle cx="${X(i)}" cy="${Y(m.d)}" r="4.5" fill="#fff" stroke="#14b8d8" stroke-width="3"><title>${m.l}: Despesas ${R(m.d)}</title></circle><text x="${X(i)}" y="${H+30}" text-anchor="middle" font-size="12" fill="#6577a0" style="text-transform:capitalize">${m.l}</text>`).join('')}</svg>`}
+function bars(M){const W=640,H=250,P=40,mx=Math.ceil(Math.max(...M.flatMap(m=>[m.r,m.d]))*1.1/2000)*2000,Y=v=>H-v/mx*H+10,s=(W-P)/6;
+return`<svg viewBox="0 0 ${W} ${H+34}" style="width:100%">${[0,1,2,3,4].map(i=>`<line x1="${P}" x2="${W}" y1="${Y(mx/4*i)}" y2="${Y(mx/4*i)}" style="stroke:var(--l)"/><text x="${P-8}" y="${Y(mx/4*i)+4}" text-anchor="end" font-size="11" fill="#6577a0">${k(mx/4*i)}</text>`).join('')}${M.map((m,i)=>{const x=P+i*s+s/2-30;return`<rect x="${x}" y="${Y(m.r)}" width="28" height="${H+10-Y(m.r)}" rx="7" fill="#1b3fa8"><title>Receitas ${R(m.r)}</title></rect><rect x="${x+32}" y="${Y(m.d)}" width="28" height="${H+10-Y(m.d)}" rx="7" fill="#9ec5ff"><title>Despesas ${R(m.d)}</title></rect><text x="${x+30}" y="${H+30}" text-anchor="middle" font-size="12" fill="#6577a0" style="text-transform:capitalize">${m.l}</text>`}).join('')}</svg>`}
+function cats(t,col){const c={};D.tx.filter(x=>x.t==t).forEach(x=>c[x.c]=(c[x.c]||0)+x.v);const e=Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,5),T=e[0]?e[0][1]:1;return e.map(x=>`<div class="cb"><div><span>${x[0]}</span><b>${R(x[1])}</b></div><div class="tr"><i style="width:${x[1]/T*100}%;background:${col}"></i></div></div>`).join('')}
+function kpi(l,v,col,bg,ic,dl){return`<div class="card kpi" style="border-left-color:${col}"><div class="ic" style="background:${bg};color:${col}">${ico(ic,24)}</div><div><div class="k">${l}</div><div class="v">${v}</div>${dl===undefined?'':`<span class="dl ${dl>=0?'u':'d'}">${ico(dl>=0?'up':'down',13)}${Math.abs(dl)}% vs mês ant.</span>`}</div></div>`}
+function dash(){const M=months(),r=sum(D.tx,'r'),d=sum(D.tx,'d'),a=M[5],p=M[4],dl=(x,y)=>y?Math.round((x-y)/y*100):0,now=iso(new Date());
+const tabs=`<div class="tabs"><button class="tab ${tab=='fin'?'on':''}" onclick="tab='fin';nav()">Análise Financeira</button><button class="tab ${tab=='op'?'on':''}" onclick="tab='op';nav()">Operacional</button><div class="sp"></div><button class="btn s" style="margin-bottom:8px" onclick="rel()">${ico('pdf',16)}Exportar Relatório</button></div>`;
+if(tab=='fin')return tabs+`<div class="grid k4">${kpi('TOTAL DE ENTRADAS',R(r),'#1b3fa8','#e3edff','up',dl(a.r,p.r))}${kpi('TOTAL DE SAÍDAS',R(d),'#e5484d','#fdecec','down',dl(a.d,p.d))}${kpi('SALDO ATUAL',R(r-d),'#12a678','#dcf6ec','wal')}${kpi('MARGEM',Math.round((r-d)/r*100)+'%','#14b8d8','#e0f4fe','tgt')}</div>
+<div class="grid c2" style="margin-top:20px"><div class="card"><div class="ch">${ico('fin')}Evolução financeira<span class="lg"><span><i style="background:#1b3fa8"></i>Receitas</span><span><i style="background:#14b8d8"></i>Despesas</span></span></div>${line(M)}</div><div class="card"><div class="ch">${ico('pie')}Entradas x Saídas<span class="lg"><span><i style="background:#1b3fa8"></i>Receitas</span><span><i style="background:#9ec5ff"></i>Despesas</span></span></div>${bars(M)}</div></div>
+<div class="grid c2" style="margin-top:20px"><div class="card"><div class="ch">${ico('up')}Top entradas por categoria</div>${cats('r','#1b3fa8')}</div><div class="card"><div class="ch">${ico('down')}Top saídas por categoria</div>${cats('d','#e5484d')}</div></div>`;
+const low=D.prod.filter(p=>p.q<=p.min),pe=D.ev.filter(e=>e.d>=now).sort((a,b)=>(a.d+a.h).localeCompare(b.d+b.h)).slice(0,5),ot=D.orc.reduce((s,o)=>s+tot(o).t,0),tv=D.prod.reduce((s,p)=>s+p.p*p.q,0);
+return tabs+`<div class="grid k4">${kpi('CLIENTES',D.cli.length,'#1b3fa8','#e3edff','cli')}${kpi('VALOR EM ESTOQUE',R(tv),'#12a678','#dcf6ec','wal')}${kpi('ORÇAMENTOS',R(ot),'#14b8d8','#e0f4fe','orc')}${kpi('ESTOQUE CRÍTICO',low.length+' itens','#f59e0b','#fff1d6','alert')}</div>
+<div class="grid c2" style="margin-top:20px"><div class="card"><div class="ch">${ico('orc')}Orçamentos recentes</div>${[...D.orc].reverse().slice(0,5).map(o=>`<div class="cell" style="padding:11px 0;border-bottom:1px solid var(--l2)"><div class="av">${ini(D.cli[o.c].n)}</div><div style="flex:1;min-width:0"><b>${D.cli[o.c].n}</b><span class="sub">#${String(o.n).padStart(4,'0')} · ${fd(o.d)}</span></div><b>${R(tot(o).t)}</b></div>`).join('')||'Nenhum'}</div><div class="card"><div class="ch">${ico('agenda')}Próximos compromissos</div>${pe.map(e=>`<div class="cell" style="padding:11px 0;border-bottom:1px solid var(--l2)"><div class="av">${ico('bell',16)}</div><div><b>${e.t}</b><span class="sub">${fd(e.d)} às ${e.h}</span></div></div>`).join('')}</div></div>
+<div class="card" style="margin-top:20px"><div class="ch">${ico('alert')}Reposição necessária</div>${low.map(p=>`<div class="cb"><div><span>${p.n}</span><b>${p.q} un.</b></div><div class="tr"><i style="width:${Math.min(100,p.q/p.min*100)}%;background:#f59e0b"></i></div></div>`).join('')||'Tudo em dia'}</div>`}
+function list(c){CF=c;return`<div class="card tcard"><div class="tb"><div class="sr">${ico('search',17)}<input id="q" placeholder="Buscar registros..." oninput="fq()"></div><div class="sp"></div><button class="btn" onclick="${c.add[1]}">${ico('plus',17)}${c.add[0]}</button></div><div class="tw" id="tw">${tbl('')}</div></div>`}
+function tbl(q){const rows=CF.rows().filter(r=>!q||CF.find(r).toLowerCase().includes(q));return`<table><thead><tr>${CF.cols.map(c=>`<th class="${c.a||''}">${c.h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${CF.cols.map(c=>`<td class="${c.a||''}">${c.f(r)}</td>`).join('')}</tr>`).join('')}</tbody></table><div class="ft">Exibindo <b>${rows.length}</b> registro(s)</div>`}
+function fq(){$('#tw').innerHTML=tbl($('#q').value.toLowerCase())}
+const xd=(kk,i)=>`<button class="xb d" title="Excluir" onclick="del('${kk}',${i})">${ico('trash',16)}</button>`;
+function del(kk,i){if(confirm('Excluir este registro?')){D[kk].splice(i,1);save();nav()}}
+function fin(){const r=sum(D.tx,'r'),d=sum(D.tx,'d');return`<div class="grid k4" style="margin-bottom:20px">${kpi('SALDO',R(r-d),'#12a678','#dcf6ec','wal')}${kpi('RECEITAS',R(r),'#1b3fa8','#e3edff','up')}${kpi('DESPESAS',R(d),'#e5484d','#fdecec','down')}${kpi('LANÇAMENTOS',D.tx.length,'#14b8d8','#e0f4fe','fin')}</div>`+list({add:['Novo lançamento','addTx()'],find:x=>x.ds+x.c+x.d,rows:()=>D.tx.map((x,i)=>({...x,_i:i})).sort((a,b)=>b.d.localeCompare(a.d)),cols:[{h:'Data',f:x=>fd(x.d)},{h:'Descrição',f:x=>`<div class="cell"><div class="av" style="background:${x.t=='r'?'#dcf6ec;color:#0d8a62':'#fde8e9;color:#c93a3f'}">${ico(x.t=='r'?'up':'down',16)}</div><div><b>${x.ds}</b><span class="sub">${x.t=='r'?'Receita':'Despesa'}</span></div></div>`},{h:'Categoria',f:x=>`<span class="tag">${x.c}</span>`},{h:'Valor',a:'r',f:x=>`<b style="color:${x.t=='r'?'#0d8a62':'#c93a3f'}">${x.t=='r'?'+':'−'} ${R(x.v)}</b>`},{h:'',a:'r',f:x=>xd('tx',x._i)}]})}
+function modal(t,f,ok){const m=document.createElement('div');m.className='mk';m.innerHTML=`<div class="md"><h3 style="margin:0 0 4px;font-size:19px">${t}</h3>${f.map(x=>`<label>${x.l}</label>${x.o?`<select id="f_${x.k}">${x.o.map(o=>`<option value="${o[0]}">${o[1]}</option>`).join('')}</select>`:`<input id="f_${x.k}" type="${x.t||'text'}" value="${x.v||''}">`}`).join('')}<div class="row"><button class="btn s" onclick="this.closest('.mk').remove()">Cancelar</button><button class="btn" id="ok">Salvar</button></div></div>`;document.body.appendChild(m);m.querySelector('#ok').onclick=()=>{const o={};f.forEach(x=>o[x.k]=m.querySelector('#f_'+x.k).value);if(ok(o)!==false){m.remove();save();nav()}}}
+function addTx(){modal('Novo lançamento',[{k:'t',l:'Tipo',o:[['r','Receita'],['d','Despesa']]},{k:'ds',l:'Descrição'},{k:'c',l:'Categoria'},{k:'v',l:'Valor (R$)',t:'number'},{k:'d',l:'Data',t:'date',v:iso(new Date())}],o=>{if(!o.ds||!+o.v)return false;D.tx.push({...o,v:+o.v,c:o.c||'Geral'})})}
+function rel(){const M=months(),r=sum(D.tx,'r'),d=sum(D.tx,'d'),mg=r?Math.round((r-d)/r*100):0,m=document.createElement('div'),tr=M.reduce((a,x)=>a+x.r,0),td=M.reduce((a,x)=>a+x.d,0);m.className='mk';
+m.innerHTML=`<div class="md doc"><div id="doc" class="dk"><div class="dh"><div class="logo"><img src="https://dkservice.vercel.app/logorodape.png" alt="DK" onerror="this.parentNode.classList.add('nologo')"><div class="fb"><i>${ico('snow',24)}</i><div><b>DK Services</b><small>MANUTENÇÃO &amp; SERVIÇOS</small></div></div></div><div class="dn"><small>RELATÓRIO GERENCIAL</small><b>Últimos 6 meses</b></div></div>
+<div class="dm"><div><small>RECEITAS</small><b style="font-size:17px;color:#0d8a62">${R(r)}</b></div><div><small>DESPESAS</small><b style="font-size:17px;color:#c93a3f">${R(d)}</b></div><div><small>RESULTADO</small><b style="font-size:17px">${R(r-d)}</b></div></div>
+<div class="db"><small>EVOLUÇÃO MENSAL</small>${bars(M)}
+<small style="margin-top:22px">DETALHAMENTO POR MÊS</small><table><thead><tr><th>Mês</th><th class="r">Receitas</th><th class="r">Despesas</th><th class="r">Resultado</th></tr></thead><tbody>${M.map(x=>`<tr><td style="text-transform:capitalize"><b>${x.l}</b></td><td class="r">${R(x.r)}</td><td class="r">${R(x.d)}</td><td class="r"><b style="color:${x.r-x.d>=0?'#0d8a62':'#c93a3f'}">${R(x.r-x.d)}</b></td></tr>`).join('')}<tr><td><b>Total</b></td><td class="r"><b>${R(tr)}</b></td><td class="r"><b>${R(td)}</b></td><td class="r"><b>${R(tr-td)}</b></td></tr></tbody></table>
+<div class="tt"><div class="g"><span>Margem</span><span>${mg}%</span></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:26px"><div><small>PRINCIPAIS ENTRADAS</small>${cats('r','#1b3fa8')}</div><div><small>PRINCIPAIS SAÍDAS</small>${cats('d','#e5484d')}</div></div></div>
+<div class="cn"><b>OBSERVAÇÕES</b>• Valores em reais (R$), consolidados mensalmente a partir dos lançamentos do sistema.<br>• Resultado = receitas − despesas do período.<br>• Relatório de uso interno da DK Services.</div>
+<div class="fo">DK Manutenção &amp; Serviços · WhatsApp (15) 99804-8978 · dkservice.vercel.app · Emitido em ${fd(iso(new Date()))}</div></div>
+<div class="row" style="padding:16px 24px;margin:0"><button class="btn s" onclick="this.closest('.mk').remove()">Fechar</button><button class="btn" onclick="print()">${ico('pdf',16)}Baixar PDF</button></div></div>`;document.body.appendChild(m)}
+function agenda(){const y=cm.getFullYear(),mo=cm.getMonth(),f=new Date(y,mo,1).getDay(),today=iso(new Date());let c='';
+for(let i=0;i<42;i++){const d=new Date(y,mo,1-f+i),kk=iso(d);c+=`<div class="dy ${d.getMonth()!=mo?'o':''} ${kk==today?'td':''}" onclick="addEv('${kk}')"><b>${d.getDate()}</b>${D.ev.filter(e=>e.d==kk).map(e=>`<div class="ev">${e.h} ${e.t}</div>`).join('')}</div>`}
+const up=D.ev.map((e,i)=>({...e,_i:i})).sort((a,b)=>(a.d+a.h).localeCompare(b.d+b.h));
+return`<div class="grid c3"><div class="card"><div class="hd"><b style="font-size:18px;text-transform:capitalize">${cm.toLocaleDateString('pt-BR',{month:'long',year:'numeric'})}</b><div class="sp"></div><button class="xb" onclick="cm.setMonth(cm.getMonth()-1);nav()">‹</button><button class="xb" onclick="cm.setMonth(cm.getMonth()+1);nav()">›</button><button class="btn" onclick="addEv(iso(new Date()))">${ico('plus',17)}Compromisso</button></div><div class="cal">${'DOM,SEG,TER,QUA,QUI,SEX,SÁB'.split(',').map(x=>`<div class="h">${x}</div>`).join('')}${c}</div></div>
+<div class="card"><div class="ch">${ico('bell')}Lembretes</div>${up.map(e=>`<div class="cell" style="padding:12px 0;border-bottom:1px solid var(--l2)"><div class="av">${ico('agenda',16)}</div><div style="flex:1"><b>${e.t}</b><span class="sub">${fd(e.d)} · ${e.h} · aviso ${e.a>=1440?'1 dia':e.a+' min'} antes</span></div>${xd('ev',e._i)}</div>`).join('')}</div></div>`}
+function addEv(d){modal('Novo compromisso',[{k:'t',l:'Título'},{k:'d',l:'Data',t:'date',v:d},{k:'h',l:'Hora',t:'time',v:'09:00'},{k:'a',l:'Lembrete',o:[['10','10 min antes'],['30','30 min antes'],['60','1 hora antes'],['1440','1 dia antes']]}],o=>{if(!o.t)return false;D.ev.push({t:o.t,d:o.d,h:o.h,a:+o.a})})}
+function chk(){const n=Date.now();D.ev.forEach(e=>{const t=new Date(e.d+'T'+e.h).getTime();if(!e.nt&&t>n&&t-n<=e.a*60000){e.nt=1;save();toast('Lembrete: '+e.t,fd(e.d)+' às '+e.h)}})}
+function toast(a,b){const t=document.createElement('div');t.className='ts';t.innerHTML=`<div class="cell"><div class="av">${ico('bell',17)}</div><div><b>${a}</b><span class="sub">${b}</span></div></div>`;$('#toasts').appendChild(t);setTimeout(()=>t.remove(),9000)}
+function est(){const tv=D.prod.reduce((s,p)=>s+p.p*p.q,0),un=D.prod.reduce((s,p)=>s+p.q,0),lw=D.prod.filter(p=>p.q<=p.min).length;return`<div class="grid k4" style="margin-bottom:20px">${kpi('VALOR TOTAL EM ESTOQUE',R(tv),'#1b3fa8','#e3edff','wal')}${kpi('UNIDADES EM ESTOQUE',un,'#12a678','#dcf6ec','est')}${kpi('PRODUTOS CADASTRADOS',D.prod.length,'#14b8d8','#e0f4fe','tgt')}${kpi('ESTOQUE CRÍTICO',lw+' itens','#f59e0b','#fff1d6','alert')}</div>`+list({add:['Novo produto','addP()'],find:p=>p.n+p.sku,rows:()=>D.prod.map((p,i)=>({...p,_i:i})),cols:[{h:'Produto',f:p=>`<div class="cell"><div class="av">${ico('est',17)}</div><div><b>${p.n}</b><span class="sub">${p.sku}</span></div></div>`},{h:'Preço unit.',a:'r',f:p=>R(p.p)},{h:'Quantidade',f:p=>`<b>${p.q}</b><span class="pgb"><i style="width:${Math.min(100,p.q/80*100)}%;background:${p.q<=p.min?'#f59e0b':'#1b3fa8'}"></i></span>`},{h:'Status',f:p=>p.q==0?'<span class="bd no">Esgotado</span>':p.q<=p.min?'<span class="bd lw">Estoque baixo</span>':'<span class="bd ok">Disponível</span>'},{h:'Valor',a:'r',f:p=>`<b>${R(p.p*p.q)}</b>`},{h:'Movimentar',a:'r',f:p=>`<button class="xb" title="Entrada +5" onclick="mv(${p._i},5)">${ico('inb',16)}</button><button class="xb" title="Saída −5" onclick="mv(${p._i},-5)">${ico('outb',16)}</button>${xd('prod',p._i)}`}]})}
+function mv(i,q){D.prod[i].q=Math.max(0,D.prod[i].q+q);save();nav()}
+function addP(){modal('Novo produto',[{k:'n',l:'Nome'},{k:'sku',l:'SKU'},{k:'p',l:'Preço',t:'number'},{k:'q',l:'Quantidade',t:'number',v:10}],o=>{if(!o.n)return false;D.prod.push({n:o.n,sku:o.sku||'SKU-'+(1001+D.prod.length),p:+o.p||0,q:+o.q||0,min:10})})}
+function cli(){return list({add:['Novo cliente','addC()'],find:c=>c.n+c.e+c.c,rows:()=>D.cli.map((c,i)=>({...c,_i:i})),cols:[{h:'Cliente',f:c=>`<div class="cell"><div class="av">${ini(c.n)}</div><div><b>${c.n}</b><span class="sub">${c.e}</span></div></div>`},{h:'Telefone',f:c=>c.t},{h:'Cidade',f:c=>`<span class="tag">${c.c}</span>`},{h:'Orçamentos',a:'c',f:c=>D.orc.filter(o=>o.c==c._i).length},{h:'',a:'r',f:c=>`<button class="xb wa" title="Chamar no WhatsApp" onclick="wa(${c._i})">${ico('wa',16)}</button>${xd('cli',c._i)}`}]})}
+function wa(i){toast('WhatsApp','Simulação: conversa aberta com '+D.cli[i].n)}
+function addC(){modal('Novo cliente',[{k:'n',l:'Nome / Empresa'},{k:'e',l:'E-mail',t:'email'},{k:'t',l:'Telefone'},{k:'c',l:'Cidade'}],o=>{if(!o.n)return false;D.cli.push(o)})}
+const itm=x=>x.k=='s'?D.svc[x.i]:D.prod[x.i];
+function tot(o){const s=o.it.reduce((a,x)=>a+itm(x).p*x.q,0);return{s,t:s*(1-o.desc/100)}}
+function orc(){return list({add:['Novo orçamento','newO()'],find:o=>(D.cli[o.c]?.n||'')+o.n,rows:()=>D.orc.map((o,i)=>({...o,_i:i})),cols:[{h:'Nº',f:o=>`<b>#${String(o.n).padStart(4,'0')}</b>`},{h:'Cliente',f:o=>{const c=D.cli[o.c];return c?`<div class="cell"><div class="av">${ini(c.n)}</div><b>${c.n}</b></div>`:'-'}},{h:'Emissão',f:o=>fd(o.d)},{h:'Itens',a:'c',f:o=>o.it.length},{h:'Total',a:'r',f:o=>`<b>${R(tot(o).t)}</b>`},{h:'',a:'r',f:o=>`<button class="xb" title="Visualizar / PDF" onclick="pdf(${o._i})">${ico('pdf',16)}</button>${xd('orc',o._i)}`}]})}
+const PGT=['50% na aprovação + 50% na conclusão','À vista (5% de desconto no PIX)','Em até 3x no cartão','Boleto 28 dias'];
+let cur;function newO(){cur={n:D.ni,c:0,d:iso(new Date()),val:15,desc:0,pg:PGT[0],it:[]};ed()}
+function addIt(){const v=$('#op').value.split(':');cur.it.push({k:v[0],i:+v[1],q:+$('#oq').value||1});ed()}
+function ed(){document.querySelectorAll('.mk').forEach(m=>m.remove());const m=document.createElement('div');m.className='mk';const t=tot(cur);
+m.innerHTML=`<div class="md w"><h3 style="margin:0;font-size:19px">Orçamento #${String(cur.n).padStart(4,'0')}</h3><div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px"><div><label>Cliente</label><select onchange="cur.c=+this.value">${D.cli.map((c,i)=>`<option value="${i}" ${i==cur.c?'selected':''}>${c.n}</option>`).join('')}</select></div><div><label>Validade (dias)</label><input type="number" value="${cur.val}" onchange="cur.val=+this.value"></div><div><label>Desconto %</label><input type="number" value="${cur.desc}" onchange="cur.desc=+this.value;ed()"></div></div>
+<label>Condição de pagamento</label><select onchange="cur.pg=this.value">${PGT.map(p=>`<option ${p==cur.pg?'selected':''}>${p}</option>`).join('')}</select>
+<label>Adicionar serviço ou peça</label><div style="display:flex;gap:10px"><select id="op"><optgroup label="Serviços">${D.svc.map((p,i)=>`<option value="s:${i}">${p.n} — ${R(p.p)}</option>`).join('')}</optgroup><optgroup label="Peças e materiais">${D.prod.map((p,i)=>`<option value="p:${i}">${p.n} — ${R(p.p)}</option>`).join('')}</optgroup></select><input id="oq" type="number" value="1" min="1" style="width:90px"><button class="btn" onclick="addIt()">${ico('plus',17)}</button></div>
+<table style="margin-top:14px"><tbody>${cur.it.map((x,j)=>`<tr><td><b>${itm(x).n}</b><span class="sub">${x.k=='s'?'Serviço':'Peça'}</span></td><td>${x.q} × ${R(itm(x).p)}</td><td class="r"><b>${R(x.q*itm(x).p)}</b></td><td class="r"><button class="xb d" onclick="cur.it.splice(${j},1);ed()">${ico('trash',16)}</button></td></tr>`).join('')}</tbody></table>
+<p class="r" style="font-size:20px;margin:16px 0 0"><b>Total: ${R(t.t)}</b></p><div class="row"><button class="btn s" onclick="this.closest('.mk').remove()">Cancelar</button><button class="btn" onclick="if(!cur.it.length)return alert('Adicione itens');D.orc.push(cur);D.ni++;save();this.closest('.mk').remove();nav()">Salvar orçamento</button></div></div>`;document.body.appendChild(m)}
+function pdf(i){const o=D.orc[i],c=D.cli[o.c]||{n:'-',e:'',t:'',c:''},t=tot(o),m=document.createElement('div'),vd=new Date(o.d+'T12:00');vd.setDate(vd.getDate()+o.val);m.className='mk';
+m.innerHTML=`<div class="md doc"><div id="doc" class="dk"><div class="dh"><div class="logo"><img src="https://dkservice.vercel.app/logorodape.png" alt="DK" onerror="this.parentNode.classList.add('nologo')"><div class="fb"><i>${ico('snow',24)}</i><div><b>DK Services</b><small>MANUTENÇÃO &amp; SERVIÇOS</small></div></div></div><div class="dn"><small>PROPOSTA COMERCIAL</small><b>Nº ${String(o.n).padStart(4,'0')}</b></div></div>
+<div class="dm"><div><small>EMITIDO EM</small><b>${fd(o.d)}</b></div><div><small>VÁLIDO ATÉ</small><b>${fd(iso(vd))}</b></div><div><small>PAGAMENTO</small><b style="font-size:13px">${o.pg||'A combinar'}</b></div></div>
+<div class="db"><small>PREPARADO PARA</small><h3>${c.n}</h3><p>${c.e} · ${c.t} · ${c.c}</p>
+<table><thead><tr><th>Descrição</th><th class="c">Qtd</th><th class="r">Unitário</th><th class="r">Subtotal</th></tr></thead><tbody>${o.it.map(x=>`<tr><td><b>${itm(x).n}</b><span class="sub">${x.k=='s'?'Serviço':'Peça / material'}</span></td><td class="c">${x.q}</td><td class="r">${R(itm(x).p)}</td><td class="r"><b>${R(x.q*itm(x).p)}</b></td></tr>`).join('')}</tbody></table>
+<div class="tt"><div><span>Subtotal</span><span>${R(t.s)}</span></div><div><span>Desconto (${o.desc}%)</span><span>− ${R(t.s-t.t)}</span></div><div class="g"><span>Total</span><span>${R(t.t)}</span></div></div></div>
+<div class="cn"><b>CONDIÇÕES GERAIS</b>• Garantia de 90 dias sobre os serviços executados; peças conforme garantia do fabricante.<br>• Prazo de execução a combinar após a aprovação desta proposta.<br>• Equipamentos e acessos devem estar disponíveis no dia da visita técnica.</div>
+<div class="sg"><div>DK Services</div><div>${c.n}</div></div><div class="fo">DK Manutenção &amp; Serviços · WhatsApp (15) 99804-8978 · dkservice.vercel.app</div></div>
+<div class="row" style="padding:16px 24px;margin:0"><button class="btn s" onclick="this.closest('.mk').remove()">Fechar</button><button class="btn" onclick="print()">${ico('pdf',16)}Baixar PDF</button></div></div>`;document.body.appendChild(m)}
+let TH=st.get('dkth')||'light';document.documentElement.dataset.theme=TH;function setTheme(t){TH=t;st.set('dkth',t);document.documentElement.dataset.theme=t;nav()}
+const s0=st.get('dk3');D=s0?JSON.parse(s0):seed();save();nav('dash');setInterval(chk,15000);chk();
+</script></body></html>
